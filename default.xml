@@ -1,47 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- 默认使用清华镜像源加速下载 -->
-  <remote name="tsinghua" fetch="https://mirrors.tuna.tsinghua.edu.cn/git/" />
-  <default remote="tsinghua" revision="master" sync-j="4" />
+  <!-- 默认远程仓库配置 -->
+  <default revision="main"
+           remote="freedesktop"
+           sync-j="4" />
 
-  <!-- Wayland 核心组件 -->
-  <project name="wayland/wayland.git" path="wayland" revision="main" />
-  <project name="wayland/wayland-protocols.git" path="wayland-protocols" revision="main" />
+  <!-- 远程仓库定义 -->
+  <remote name="freedesktop"
+          fetch="https://gitlab.freedesktop.org" />
+  
+  <remote name="github"
+          fetch="https://github.com" />
+  
+  <remote name="kernel"
+          fetch="https://git.kernel.org/pub/scm" />
 
-  <!-- 显卡驱动与3D渲染 -->
-  <project name="mesa/drm.git" path="libdrm" revision="master" />
-  <project name="mesa/mesa.git" path="mesa" revision="main" />
+  <remote name="gnome"
+          fetch="https://gitlab.gnome.org" />
 
-  <!-- 输入设备处理 -->
-  <project name="wayland/libinput.git" path="libinput" revision="master" />
-  <project name="xkbcommon/libxkbcommon.git" path="libxkbcommon" revision="master" />
+  <!-- Wayland核心协议 -->
+  <project path="wayland/wayland"
+           name="wayland/wayland"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="wayland/wayland-protocols"
+           name="wayland/wayland-protocols"
+           remote="freedesktop"
+           revision="main" />
+
+  <!-- Weston核心 -->
+  <project path="wayland/weston"
+           name="wayland/weston"
+           remote="freedesktop"
+           revision="main" />
+
+  <!-- Mesa 3D图形库 -->
+  <project path="mesa/mesa"
+           name="mesa/mesa"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="mesa/drm"
+           name="mesa/drm"
+           remote="freedesktop"
+           revision="main" />
+
+  <!-- 内核DRM支持 -->
+  <project path="kernel/drm-tip"
+           name="linux/kernel/git/torvalds/linux.git"
+           remote="kernel"
+           revision="master" />
+
+  <!-- 图形驱动相关 -->
+  <project path="xorg/lib/libxkbcommon"
+           name="xkeyboard-config/libxkbcommon"
+           remote="freedesktop"
+           revision="master" />
+
+  <project path="xorg/lib/libinput"
+           name="libinput/libinput"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="xorg/lib/libevdev"
+           name="libevdev/libevdev"
+           remote="freedesktop"
+           revision="master" />
+
+  <!-- Cairo图形库 -->
+  <project path="cairo/cairo"
+           name="cairo/cairo"
+           remote="freedesktop"
+           revision="master" />
+
+  <project path="cairo/pixman"
+           name="pixman/pixman"
+           remote="freedesktop"
+           revision="master" />
+
+  <!-- 字体相关 -->
+  <project path="fontconfig/fontconfig"
+           name="fontconfig/fontconfig"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="freetype/freetype"
+           name="freetype/freetype.git"
+           remote="github"
+           revision="master" />
+
+  <project path="harfbuzz/harfbuzz"
+           name="harfbuzz/harfbuzz"
+           remote="github"
+           revision="main" />
+
+  <!-- GStreamer多媒体框架 -->
+  <project path="gstreamer/gstreamer"
+           name="gstreamer/gstreamer"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="gstreamer/gst-plugins-base"
+           name="gstreamer/gst-plugins-base"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="gstreamer/gst-plugins-good"
+           name="gstreamer/gst-plugins-good"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="gstreamer/gst-plugins-bad"
+           name="gstreamer/gst-plugins-bad"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="gstreamer/gst-plugins-ugly"
+           name="gstreamer/gst-plugins-ugly"
+           remote="freedesktop"
+           revision="main" />
+
+  <!-- PulseAudio音频系统 -->
+  <project path="pulseaudio/pulseaudio"
+           name="pulseaudio/pulseaudio"
+           remote="freedesktop"
+           revision="master" />
+
+  <project path="pulseaudio/libsndfile"
+           name="libsndfile/libsndfile"
+           remote="github"
+           revision="master" />
+
+  <!-- 系统集成相关 -->
+  <project path="systemd/systemd"
+           name="systemd/systemd"
+           remote="github"
+           revision="main" />
+
+  <project path="dbus/dbus"
+           name="dbus/dbus"
+           remote="freedesktop"
+           revision="master" />
+
+  <!-- 构建系统 -->
+  <project path="meson/meson"
+           name="mesonbuild/meson"
+           remote="github"
+           revision="master" />
+
+  <project path="ninja/ninja"
+           name="ninja-build/ninja"
+           remote="github"
+           revision="master" />
+
+  <!-- 开发工具 -->
+  <project path="pkg-config/pkg-config"
+           name="pkgconf/pkgconf"
+           remote="github"
+           revision="master" />
+
+  <!-- GNOME相关库 -->
+  <project path="glib/glib"
+           name="GNOME/glib"
+           remote="gnome"
+           revision="main" />
+
+  <project path="glib/gobject-introspection"
+           name="GNOME/gobject-introspection"
+           remote="gnome"
+           revision="main" />
+
+  <project path="pango/pango"
+           name="GNOME/pango"
+           remote="gnome"
+           revision="main" />
+
+  <!-- JSON处理库 -->
+  <project path="json/json-c"
+           name="json-c/json-c"
+           remote="github"
+           revision="master" />
 
   <!-- 图像处理库 -->
-  <project name="libjpeg-turbo/libjpeg-turbo.git" path="libjpeg-turbo" revision="main" />
-  <project name="libpng/libpng.git" path="libpng" revision="master" />
+  <project path="libjpeg/libjpeg-turbo"
+           name="libjpeg-turbo/libjpeg-turbo"
+           remote="github"
+           revision="main" />
 
-  <!-- 字体渲染与文本处理 -->
-  <project name="freetype/freetype2.git" path="freetype" revision="master" />
-  <project name="fontconfig/fontconfig.git" path="fontconfig" revision="main" />
-  <project name="cairo/cairo.git" path="cairo" revision="master" />
-  <project name="pango/pango.git" path="pango" revision="main" />
+  <project path="libpng/libpng"
+           name="glennrp/libpng"
+           remote="github"
+           revision="libpng16" />
 
-  <!-- 2D渲染库 -->
-  <project name="xorg/pixman.git" path="pixman" revision="master" />
+  <project path="libwebp/libwebp"
+           name="webmproject/libwebp"
+           remote="github"
+           revision="main" />
 
-  <!-- X11兼容层 -->
-  <project name="xorg/lib/libxcb.git" path="libxcb" revision="master" />
-  <project name="xorg/lib/libX11.git" path="libX11" revision="master" />
-  <project name="xorg/lib/libXcursor.git" path="libXcursor" revision="master" />
-  <project name="xorg/lib/libXi.git" path="libXi" revision="master" />
-  <project name="xorg/lib/libxkbfile.git" path="libxkbfile" revision="master" />
-  <project name="xorg/lib/libXtst.git" path="libXtst" revision="master" />
+  <!-- XML处理库 -->
+  <project path="libxml2/libxml2"
+           name="GNOME/libxml2"
+           remote="gnome"
+           revision="master" />
 
-  <!-- 通用依赖库 -->
-  <project name="libffi/libffi.git" path="libffi" revision="master" />
-  <project name="libexpat/libexpat.git" path="expat" revision="master" />
-  <project name="madler/zlib.git" path="zlib" revision="master" />
+  <project path="libxslt/libxslt"
+           name="GNOME/libxslt"
+           remote="gnome"
+           revision="master" />
 
-  <!-- Weston合成器 -->
-  <project name="wayland/weston.git" path="weston" revision="main" />
+  <!-- 网络库 -->
+  <project path="curl/curl"
+           name="curl/curl"
+           remote="github"
+           revision="master" />
+
+  <!-- 压缩库 -->
+  <project path="zlib/zlib"
+           name="madler/zlib"
+           remote="github"
+           revision="master" />
+
+  <project path="libarchive/libarchive"
+           name="libarchive/libarchive"
+           remote="github"
+           revision="master" />
+
+  <!-- 加密库 -->
+  <project path="openssl/openssl"
+           name="openssl/openssl"
+           remote="github"
+           revision="master" />
+
+  <!-- 国际化支持 -->
+  <project path="gettext/gettext"
+           name="autotools-mirror/gettext"
+           remote="github"
+           revision="master" />
+
+  <!-- 调试工具 -->
+  <project path="valgrind/valgrind"
+           name="valgrind/valgrind"
+           remote="github"
+           revision="master" />
+
+  <!-- 文档生成 -->
+  <project path="doxygen/doxygen"
+           name="doxygen/doxygen"
+           remote="github"
+           revision="master" />
+
+  <!-- 单元测试框架 -->
+  <project path="check/check"
+           name="libcheck/check"
+           remote="github"
+           revision="master" />
+
+  <!-- Wayland相关扩展协议 -->
+  <project path="wayland/wayland-utils"
+           name="wayland/wayland-utils"
+           remote="freedesktop"
+           revision="main" />
+
+  <project path="wayland/weston-ivi-shell"
+           name="COVESA/weston-ivi-shell"
+           remote="github"
+           revision="master" />
+
+  <!-- 输入法支持 -->
+  <project path="ibus/ibus"
+           name="ibus/ibus"
+           remote="github"
+           revision="main" />
+
+  <!-- 蓝牙支持 -->
+  <project path="bluez/bluez"
+           name="bluez/bluez"
+           remote="github"
+           revision="master" />
+
+  <!-- V4L2支持 -->
+  <project path="v4l/v4l-utils"
+           name="linux/kernel/git/mchehab/v4l-utils.git"
+           remote="kernel"
+           revision="master" />
+
+  <!-- FFmpeg多媒体库 -->
+  <project path="ffmpeg/ffmpeg"
+           name="FFmpeg/FFmpeg"
+           remote="github"
+           revision="master" />
+
+  <!-- OpenGL相关 -->
+  <project path="khronos/opengl-registry"
+           name="KhronosGroup/OpenGL-Registry"
+           remote="github"
+           revision="main" />
+
+  <project path="khronos/egl-registry"
+           name="KhronosGroup/EGL-Registry"
+           remote="github"
+           revision="main" />
+
+  <!-- LLVM编译器基础设施 (Mesa依赖) -->
+  <project path="llvm/llvm-project"
+           name="llvm/llvm-project"
+           remote="github"
+           revision="main" />
+
+  <!-- Rust工具链 (某些新组件需要) -->
+  <project path="rust/rust"
+           name="rust-lang/rust"
+           remote="github"
+           revision="master" />
+
+  <!-- 性能分析工具 -->
+  <project path="perf/linux-perf"
+           name="linux/kernel/git/tip/tip.git"
+           remote="kernel"
+           revision="master" />
+
+  <!-- 虚拟化支持 -->
+  <project path="qemu/qemu"
+           name="qemu/qemu"
+           remote="github"
+           revision="master" />
+
+  <!-- 容器支持 -->
+  <project path="oci/runc"
+           name="opencontainers/runc"
+           remote="github"
+           revision="main" />
+
 </manifest>
