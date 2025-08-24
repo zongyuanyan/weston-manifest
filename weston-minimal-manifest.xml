@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- Weston最小化构建manifest - 仅包含核心依赖 -->
+  <!-- Weston稳定构建manifest - 使用经过验证的版本 -->
   
   <default revision="main"
            remote="freedesktop"
@@ -15,114 +15,115 @@
   <remote name="gnome"
           fetch="https://gitlab.gnome.org" />
 
-  <!-- Wayland核心 -->
+  <!-- Wayland核心组件 - 使用稳定版本 -->
   <project path="wayland/wayland"
            name="wayland/wayland"
            remote="freedesktop"
-           revision="main" />
+           revision="1.22.0" />
 
   <project path="wayland/wayland-protocols"
            name="wayland/wayland-protocols"
            remote="freedesktop"
-           revision="main" />
+           revision="1.36" />
 
-  <!-- Weston -->
+  <!-- Weston - 使用稳定版本 -->
   <project path="wayland/weston"
            name="wayland/weston"
            remote="freedesktop"
-           revision="main" />
+           revision="13.0.0" />
 
   <!-- 基础图形库 -->
   <project path="mesa/drm"
            name="mesa/drm"
            remote="freedesktop"
-           revision="main" />
+           revision="2.4.120" />
 
   <project path="mesa/mesa"
            name="mesa/mesa"
            remote="freedesktop"
-           revision="main" />
+           revision="24.0.0" />
 
   <!-- 输入支持 -->
   <project path="xorg/lib/libxkbcommon"
-           name="xkeyboard-config/libxkbcommon"
-           remote="freedesktop"
-           revision="master" />
+           name="xkbcommon/libxkbcommon"
+           remote="github"
+           revision="xkbcommon-1.6.0" />
 
   <project path="xorg/lib/libinput"
            name="libinput/libinput"
            remote="freedesktop"
-           revision="main" />
+           revision="1.25.0" />
 
   <project path="xorg/lib/libevdev"
            name="libevdev/libevdev"
            remote="freedesktop"
-           revision="master" />
+           revision="libevdev-1.13.1" />
 
   <!-- Cairo渲染 -->
   <project path="cairo/cairo"
            name="cairo/cairo"
            remote="freedesktop"
-           revision="master" />
+           revision="1.18.0" />
 
   <project path="cairo/pixman"
            name="pixman/pixman"
            remote="freedesktop"
-           revision="master" />
+           revision="pixman-0.42.2" />
 
   <!-- 字体支持 -->
   <project path="fontconfig/fontconfig"
            name="fontconfig/fontconfig"
            remote="freedesktop"
-           revision="main" />
+           revision="2.15.0" />
 
   <project path="freetype/freetype"
-           name="freetype/freetype.git"
+           name="freetype/freetype"
            remote="github"
-           revision="master" />
+           revision="VER-2-13-2" />
 
   <project path="harfbuzz/harfbuzz"
            name="harfbuzz/harfbuzz"
            remote="github"
-           revision="main" />
+           revision="8.3.0" />
 
-  <!-- 基础库 -->
+  <!-- 基础系统库 -->
   <project path="glib/glib"
            name="GNOME/glib"
            remote="gnome"
-           revision="main" />
+           revision="2.78.0" />
 
-  <!-- 图像处理 -->
+  <!-- 图像处理库 -->
   <project path="libjpeg/libjpeg-turbo"
            name="libjpeg-turbo/libjpeg-turbo"
            remote="github"
-           revision="main" />
+           revision="3.0.1" />
 
   <project path="libpng/libpng"
-           name="glennrp/libpng"
+           name="pnggroup/libpng"
            remote="github"
-           revision="libpng16" />
+           revision="v1.6.40" />
 
   <project path="libwebp/libwebp"
            name="webmproject/libwebp"
            remote="github"
-           revision="main" />
+           revision="v1.3.2" />
 
   <!-- JSON支持 -->
   <project path="json/json-c"
            name="json-c/json-c"
            remote="github"
-           revision="master" />
+           revision="json-c-0.17-20230812" />
 
   <!-- 构建工具 -->
-  <project path="meson/meson"
-           name="mesonbuild/meson"
-           remote="github"
-           revision="master" />
-
-  <project path="pkg-config/pkg-config"
+  <project path="pkg-config/pkgconf"
            name="pkgconf/pkgconf"
            remote="github"
-           revision="master" />
+           revision="pkgconf-2.1.0" />
+
+  <!-- 压缩库 -->
+  <project path="zlib/zlib"
+           name="madler/zlib"
+           remote="github"
+           revision="v1.3" />
 
 </manifest>

@@ -46,16 +46,10 @@
            remote="freedesktop"
            revision="main" />
 
-  <!-- 内核DRM支持 -->
-  <project path="kernel/drm-tip"
-           name="linux/kernel/git/torvalds/linux.git"
-           remote="kernel"
-           revision="master" />
-
   <!-- 图形驱动相关 -->
   <project path="xorg/lib/libxkbcommon"
-           name="xkeyboard-config/libxkbcommon"
-           remote="freedesktop"
+           name="xkbcommon/libxkbcommon"
+           remote="github"
            revision="master" />
 
   <project path="xorg/lib/libinput"
@@ -86,7 +80,7 @@
            revision="main" />
 
   <project path="freetype/freetype"
-           name="freetype/freetype.git"
+           name="freetype/freetype"
            remote="github"
            revision="master" />
 
@@ -99,27 +93,27 @@
   <project path="gstreamer/gstreamer"
            name="gstreamer/gstreamer"
            remote="freedesktop"
-           revision="main" />
+           revision="1.24" />
 
   <project path="gstreamer/gst-plugins-base"
            name="gstreamer/gst-plugins-base"
            remote="freedesktop"
-           revision="main" />
+           revision="1.24" />
 
   <project path="gstreamer/gst-plugins-good"
            name="gstreamer/gst-plugins-good"
            remote="freedesktop"
-           revision="main" />
+           revision="1.24" />
 
   <project path="gstreamer/gst-plugins-bad"
            name="gstreamer/gst-plugins-bad"
            remote="freedesktop"
-           revision="main" />
+           revision="1.24" />
 
   <project path="gstreamer/gst-plugins-ugly"
            name="gstreamer/gst-plugins-ugly"
            remote="freedesktop"
-           revision="main" />
+           revision="1.24" />
 
   <!-- PulseAudio音频系统 -->
   <project path="pulseaudio/pulseaudio"
@@ -140,7 +134,7 @@
 
   <project path="dbus/dbus"
            name="dbus/dbus"
-           remote="freedesktop"
+           remote="github"
            revision="master" />
 
   <!-- 构建系统 -->
@@ -155,7 +149,7 @@
            revision="master" />
 
   <!-- 开发工具 -->
-  <project path="pkg-config/pkg-config"
+  <project path="pkg-config/pkgconf"
            name="pkgconf/pkgconf"
            remote="github"
            revision="master" />
@@ -189,7 +183,7 @@
            revision="main" />
 
   <project path="libpng/libpng"
-           name="glennrp/libpng"
+           name="pnggroup/libpng"
            remote="github"
            revision="libpng16" />
 
@@ -219,7 +213,7 @@
   <project path="zlib/zlib"
            name="madler/zlib"
            remote="github"
-           revision="master" />
+           revision="develop" />
 
   <project path="libarchive/libarchive"
            name="libarchive/libarchive"
@@ -240,7 +234,7 @@
 
   <!-- 调试工具 -->
   <project path="valgrind/valgrind"
-           name="valgrind/valgrind"
+           name="mmuman/valgrind"
            remote="github"
            revision="master" />
 
@@ -262,11 +256,6 @@
            remote="freedesktop"
            revision="main" />
 
-  <project path="wayland/weston-ivi-shell"
-           name="COVESA/weston-ivi-shell"
-           remote="github"
-           revision="master" />
-
   <!-- 输入法支持 -->
   <project path="ibus/ibus"
            name="ibus/ibus"
@@ -277,12 +266,6 @@
   <project path="bluez/bluez"
            name="bluez/bluez"
            remote="github"
-           revision="master" />
-
-  <!-- V4L2支持 -->
-  <project path="v4l/v4l-utils"
-           name="linux/kernel/git/mchehab/v4l-utils.git"
-           remote="kernel"
            revision="master" />
 
   <!-- FFmpeg多媒体库 -->
@@ -299,36 +282,6 @@
 
   <project path="khronos/egl-registry"
            name="KhronosGroup/EGL-Registry"
-           remote="github"
-           revision="main" />
-
-  <!-- LLVM编译器基础设施 (Mesa依赖) -->
-  <project path="llvm/llvm-project"
-           name="llvm/llvm-project"
-           remote="github"
-           revision="main" />
-
-  <!-- Rust工具链 (某些新组件需要) -->
-  <project path="rust/rust"
-           name="rust-lang/rust"
-           remote="github"
-           revision="master" />
-
-  <!-- 性能分析工具 -->
-  <project path="perf/linux-perf"
-           name="linux/kernel/git/tip/tip.git"
-           remote="kernel"
-           revision="master" />
-
-  <!-- 虚拟化支持 -->
-  <project path="qemu/qemu"
-           name="qemu/qemu"
-           remote="github"
-           revision="master" />
-
-  <!-- 容器支持 -->
-  <project path="oci/runc"
-           name="opencontainers/runc"
            remote="github"
            revision="main" />
 
