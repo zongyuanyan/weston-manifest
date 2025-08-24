@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- 默认 remote 使用清华镜像 -->
+  <!-- 默认使用清华镜像源加速下载 -->
   <remote name="tsinghua" fetch="https://mirrors.tuna.tsinghua.edu.cn/git/" />
   <default remote="tsinghua" revision="master" sync-j="4" />
 
-  <!-- Wayland 基础 -->
+  <!-- Wayland 核心组件 -->
   <project name="wayland/wayland.git" path="wayland" revision="main" />
   <project name="wayland/wayland-protocols.git" path="wayland-protocols" revision="main" />
 
-  <!-- 显卡相关 -->
+  <!-- 显卡驱动与3D渲染 -->
   <project name="mesa/drm.git" path="libdrm" revision="master" />
   <project name="mesa/mesa.git" path="mesa" revision="main" />
 
-  <!-- 输入 -->
+  <!-- 输入设备处理 -->
   <project name="wayland/libinput.git" path="libinput" revision="master" />
   <project name="xkbcommon/libxkbcommon.git" path="libxkbcommon" revision="master" />
 
-  <!-- 图像库 -->
+  <!-- 图像处理库 -->
   <project name="libjpeg-turbo/libjpeg-turbo.git" path="libjpeg-turbo" revision="main" />
   <project name="libpng/libpng.git" path="libpng" revision="master" />
 
-  <!-- 字体 & 文本 -->
+  <!-- 字体渲染与文本处理 -->
   <project name="freetype/freetype2.git" path="freetype" revision="master" />
   <project name="fontconfig/fontconfig.git" path="fontconfig" revision="main" />
   <project name="cairo/cairo.git" path="cairo" revision="master" />
   <project name="pango/pango.git" path="pango" revision="main" />
 
-  <!-- 2D 渲染 -->
+  <!-- 2D渲染库 -->
   <project name="xorg/pixman.git" path="pixman" revision="master" />
 
-  <!-- X11 兼容 -->
+  <!-- X11兼容层 -->
   <project name="xorg/lib/libxcb.git" path="libxcb" revision="master" />
   <project name="xorg/lib/libX11.git" path="libX11" revision="master" />
   <project name="xorg/lib/libXcursor.git" path="libXcursor" revision="master" />
@@ -37,11 +37,11 @@
   <project name="xorg/lib/libxkbfile.git" path="libxkbfile" revision="master" />
   <project name="xorg/lib/libXtst.git" path="libXtst" revision="master" />
 
-  <!-- 通用依赖 -->
+  <!-- 通用依赖库 -->
   <project name="libffi/libffi.git" path="libffi" revision="master" />
   <project name="libexpat/libexpat.git" path="expat" revision="master" />
   <project name="madler/zlib.git" path="zlib" revision="master" />
 
-  <!-- Weston -->
+  <!-- Weston合成器 -->
   <project name="wayland/weston.git" path="weston" revision="main" />
 </manifest>
