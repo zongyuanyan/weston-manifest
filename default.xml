@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- 定义远端 -->
+  <remote name="freedesktop" fetch="https://gitlab.freedesktop.org/" />
+  <remote name="github" fetch="https://github.com/" />
+
+  <!-- 默认分支（这里统一用 master/main，具体版本可以自己锁 tag） -->
+  <default remote="freedesktop" revision="master" />
+
+  <!-- Wayland 核心 -->
+  <project name="wayland/wayland" path="wayland" revision="main" />
+  <project name="wayland/wayland-protocols" path="wayland-protocols" revision="main" />
+
+  <!-- Weston -->
+  <project name="wayland/weston" path="weston" revision="main" />
+
+  <!-- DRM / 显示 -->
+  <project name="mesa/drm" path="libdrm" revision="main" />
+  <project name="mesa/mesa" path="mesa" revision="main" />
+  <project name="pixman/pixman" path="pixman" revision="main" />
+
+  <!-- 图形基础库 -->
+  <project name="cairo/cairo" path="cairo" revision="master" />
+  <project name="xorg/lib/libxkbcommon" path="libxkbcommon" revision="master" />
+  <project name="libinput/libinput" path="libinput" revision="main" />
+  <project name="libmtdev/libmtdev" path="libmtdev" revision="master" />
+
+  <!-- 常用图片库 -->
+  <project name="libpng/libpng" path="libpng" remote="github" revision="main" />
+  <project name="libjpeg-turbo/libjpeg-turbo" path="libjpeg-turbo" remote="github" revision="main" />
+</manifest>
