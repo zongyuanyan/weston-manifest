@@ -95,22 +95,22 @@
            remote="freedesktop"
            revision="1.24" />
 
-  <project path="gstreamer/gst-plugins-base"
+  <!project path="gstreamer/gst-plugins-base"
            name="gstreamer/gst-plugins-base"
            remote="freedesktop"
            revision="1.24" />
 
-  <project path="gstreamer/gst-plugins-good"
+  <!project path="gstreamer/gst-plugins-good"
            name="gstreamer/gst-plugins-good"
            remote="freedesktop"
            revision="1.24" />
 
-  <project path="gstreamer/gst-plugins-bad"
+  <!project path="gstreamer/gst-plugins-bad"
            name="gstreamer/gst-plugins-bad"
            remote="freedesktop"
            revision="1.24" />
 
-  <project path="gstreamer/gst-plugins-ugly"
+  <!project path="gstreamer/gst-plugins-ugly"
            name="gstreamer/gst-plugins-ugly"
            remote="freedesktop"
            revision="1.24" />
@@ -215,7 +215,7 @@
            remote="github"
            revision="develop" />
 
-  <project path="libarchive/libarchive"
+  <!project path="libarchive/libarchive"
            name="libarchive/libarchive"
            remote="github"
            revision="master" />
@@ -227,7 +227,7 @@
            revision="master" />
 
   <!-- 国际化支持 -->
-  <project path="gettext/gettext"
+  <!project path="gettext/gettext"
            name="autotools-mirror/gettext"
            remote="github"
            revision="master" />
@@ -257,13 +257,13 @@
            revision="main" />
 
   <!-- 输入法支持 -->
-  <project path="ibus/ibus"
+  <!project path="ibus/ibus"
            name="ibus/ibus"
            remote="github"
            revision="main" />
 
   <!-- 蓝牙支持 -->
-  <project path="bluez/bluez"
+  <!project path="bluez/bluez"
            name="bluez/bluez"
            remote="github"
            revision="master" />
