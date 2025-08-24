@@ -1,31 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- 定义远端 -->
-  <remote name="freedesktop" fetch="https://gitlab.freedesktop.org/" />
-  <remote name="github" fetch="https://github.com/" />
+  <!-- 默认 remote 使用清华镜像 -->
+  <remote name="tsinghua" fetch="https://mirrors.tuna.tsinghua.edu.cn/git/" />
+  <default remote="tsinghua" revision="master" sync-j="4" />
 
-  <!-- 默认分支（这里统一用 master/main，具体版本可以自己锁 tag） -->
-  <default remote="freedesktop" revision="master" />
+  <!-- Wayland 基础 -->
+  <project name="wayland/wayland.git" path="wayland" revision="main" />
+  <project name="wayland/wayland-protocols.git" path="wayland-protocols" revision="main" />
 
-  <!-- Wayland 核心 -->
-  <project name="wayland/wayland" path="wayland" revision="main" />
-  <project name="wayland/wayland-protocols" path="wayland-protocols" revision="main" />
+  <!-- 显卡相关 -->
+  <project name="mesa/drm.git" path="libdrm" revision="master" />
+  <project name="mesa/mesa.git" path="mesa" revision="main" />
+
+  <!-- 输入 -->
+  <project name="wayland/libinput.git" path="libinput" revision="master" />
+  <project name="xkbcommon/libxkbcommon.git" path="libxkbcommon" revision="master" />
+
+  <!-- 图像库 -->
+  <project name="libjpeg-turbo/libjpeg-turbo.git" path="libjpeg-turbo" revision="main" />
+  <project name="libpng/libpng.git" path="libpng" revision="master" />
+
+  <!-- 字体 & 文本 -->
+  <project name="freetype/freetype2.git" path="freetype" revision="master" />
+  <project name="fontconfig/fontconfig.git" path="fontconfig" revision="main" />
+  <project name="cairo/cairo.git" path="cairo" revision="master" />
+  <project name="pango/pango.git" path="pango" revision="main" />
+
+  <!-- 2D 渲染 -->
+  <project name="xorg/pixman.git" path="pixman" revision="master" />
+
+  <!-- X11 兼容 -->
+  <project name="xorg/lib/libxcb.git" path="libxcb" revision="master" />
+  <project name="xorg/lib/libX11.git" path="libX11" revision="master" />
+  <project name="xorg/lib/libXcursor.git" path="libXcursor" revision="master" />
+  <project name="xorg/lib/libXi.git" path="libXi" revision="master" />
+  <project name="xorg/lib/libxkbfile.git" path="libxkbfile" revision="master" />
+  <project name="xorg/lib/libXtst.git" path="libXtst" revision="master" />
+
+  <!-- 通用依赖 -->
+  <project name="libffi/libffi.git" path="libffi" revision="master" />
+  <project name="libexpat/libexpat.git" path="expat" revision="master" />
+  <project name="madler/zlib.git" path="zlib" revision="master" />
 
   <!-- Weston -->
-  <project name="wayland/weston" path="weston" revision="main" />
-
-  <!-- DRM / 显示 -->
-  <project name="mesa/drm" path="libdrm" revision="main" />
-  <project name="mesa/mesa" path="mesa" revision="main" />
-  <project name="pixman/pixman" path="pixman" revision="main" />
-
-  <!-- 图形基础库 -->
-  <project name="cairo/cairo" path="cairo" revision="master" />
-  <project name="xorg/lib/libxkbcommon" path="libxkbcommon" revision="master" />
-  <project name="libinput/libinput" path="libinput" revision="main" />
-  <project name="libmtdev/libmtdev" path="libmtdev" revision="master" />
-
-  <!-- 常用图片库 -->
-  <project name="libpng/libpng" path="libpng" remote="github" revision="main" />
-  <project name="libjpeg-turbo/libjpeg-turbo" path="libjpeg-turbo" remote="github" revision="main" />
+  <project name="wayland/weston.git" path="weston" revision="main" />
 </manifest>
