@@ -95,26 +95,6 @@
            remote="freedesktop"
            revision="1.24" />
 
-  <!project path="gstreamer/gst-plugins-base"
-           name="gstreamer/gst-plugins-base"
-           remote="freedesktop"
-           revision="1.24" />
-
-  <!project path="gstreamer/gst-plugins-good"
-           name="gstreamer/gst-plugins-good"
-           remote="freedesktop"
-           revision="1.24" />
-
-  <!project path="gstreamer/gst-plugins-bad"
-           name="gstreamer/gst-plugins-bad"
-           remote="freedesktop"
-           revision="1.24" />
-
-  <!project path="gstreamer/gst-plugins-ugly"
-           name="gstreamer/gst-plugins-ugly"
-           remote="freedesktop"
-           revision="1.24" />
-
   <!-- PulseAudio音频系统 -->
   <project path="pulseaudio/pulseaudio"
            name="pulseaudio/pulseaudio"
@@ -215,20 +195,9 @@
            remote="github"
            revision="develop" />
 
-  <!project path="libarchive/libarchive"
-           name="libarchive/libarchive"
-           remote="github"
-           revision="master" />
-
   <!-- 加密库 -->
   <project path="openssl/openssl"
            name="openssl/openssl"
-           remote="github"
-           revision="master" />
-
-  <!-- 国际化支持 -->
-  <!project path="gettext/gettext"
-           name="autotools-mirror/gettext"
            remote="github"
            revision="master" />
 
@@ -255,18 +224,6 @@
            name="wayland/wayland-utils"
            remote="freedesktop"
            revision="main" />
-
-  <!-- 输入法支持 -->
-  <!project path="ibus/ibus"
-           name="ibus/ibus"
-           remote="github"
-           revision="main" />
-
-  <!-- 蓝牙支持 -->
-  <!project path="bluez/bluez"
-           name="bluez/bluez"
-           remote="github"
-           revision="master" />
 
   <!-- FFmpeg多媒体库 -->
   <project path="ffmpeg/ffmpeg"
